@@ -1,0 +1,98 @@
+:root {
+    --background-color: rgb(13, 13, 13);
+    --background-titulo: rgb(45, 45, 45);
+    --color-titulo: aliceblue;
+    --color-texto: rgba(240, 248, 255, 0.758);
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.title_background {
+    background-color: var(--background-titulo);
+    padding: 1px;
+    width: 100%;
+    margin: 5% 0 5% 0;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    color: var(--color-titulo);
+    font-family: "Baskervville", serif;
+    font-size: 5vw;
+}
+
+.content{
+    margin: 3%;
+    display: grid;
+    justify-content: center;
+    gap: 2%;
+}
+
+.text1 {
+    color: var(--color-texto);
+    text-align: start;
+    font-family: "Baskervville", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 3vw;
+    letter-spacing: 1px;
+}
+
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 2vw;
+    }
+
+    
+}
+
+/* Acordion texto desplegable */
+.accordion {
+  width: 300px;
+  font-family: Arial;
+}
+
+.accordion-btn {
+    width: 90vw;
+    background: var(--background-titulo);
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+    border-radius: 10px;
+    transition: 0.1s;
+
+}
+
+.accordion-btn:hover {
+  background: #262829;
+  transform: scale(1.01);
+}
+
+.accordion-content {
+    width: 80vw;
+    max-height: 0;
+    overflow: hidden;
+    color: var(--color-texto);
+    padding: 0 12px;
+    transition: max-height 0.3s ;
+
+}
+
+.accordion-content.show {
+  max-height: 200px; /* Ajustá según el texto */
+  padding: 12px;
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(112, 159, 200);
+    font-size: 2.5vw;
+
+}
